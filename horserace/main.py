@@ -3,20 +3,24 @@ import os
 import time
 
 
-STEPS = 20
+FINISH_LINE = 20
 
 
 class Horse(object):
 
     def __init__(self, name):
         self.name = name
-        self.speed = 0
+        self.location = 0
 
     def run(self):
-        self.speed += randint(0, 1)
+        speed = randint(0, 1)
+        self.location += speed
 
     def locate(self):
-        return self.speed
+        return self.location
+
+    def has_arrive(self, finish_line_distance):
+        return self.location == finish_line_distance
 
 
 class Horses(object):
@@ -37,6 +41,12 @@ class Horses(object):
         for horse in self.horses:
             horse.run()
 
+    def first_arrive(self, finish_line_distance):
+        for horse in self.horses:
+            if horse.has_arrive(finish_line_distance):
+                return True
+        return False
+
 
 class HorseConsolePresenter(object):
 
@@ -45,8 +55,9 @@ class HorseConsolePresenter(object):
 
     def present(self):
         name = self.horse.name
-        position = '*' * self.horse.locate()
-        status = '{}:\t{}\n'.format(name, position)
+        distance = self.horse.locate()
+        position = '*' * distance
+        status = '{}:\t{}\t{}\n'.format(name, distance, position)
         return status
 
 
@@ -88,8 +99,14 @@ class HorsesConsoleViewer(object):
     def show(self, step):
         time.sleep(0.5)
         os.system('clear')
-        screen = '{}\n{}\n{}'.format(
-                step, self.horsesp.present(), self.winnerp.present())
+        screen = ''
+        screeners = [
+            step + 1,
+            self.horsesp.present(),
+            self.winnerp.present()
+        ]
+        for screener in screeners:
+            screen += '{}\n'.format(screener)
         print(screen)
 
 
@@ -106,11 +123,12 @@ def main():
 
     horsesp = HorsesConsolePresenter(horses)
     winnerp = WinnerHorseConsolePresenter(horses)
-
+    step = 0
     viewer = HorsesConsoleViewer(horsesp, winnerp)
-    for step in range(STEPS):
+    while not horses.first_arrive(FINISH_LINE):
         horses.run()
         viewer.show(step)
+        step += 1
 
 
 if __name__ == '__main__':
