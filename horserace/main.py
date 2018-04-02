@@ -5,12 +5,13 @@ import time
 
 STEPS = 20
 
+
 class Horse(object):
 
     def __init__(self, name):
         self.name = name
         self.speed = 0
-    
+
     def run(self):
         self.speed += randint(0, 1)
 
@@ -41,7 +42,7 @@ class HorseConsolePresenter(object):
 
     def __init__(self, horse):
         self.horse = horse
-    
+
     def present(self):
         name = self.horse.name
         position = '*' * self.horse.locate()
@@ -53,7 +54,7 @@ class HorsesConsolePresenter(object):
 
     def __init__(self, horses):
         self.horses = horses
-    
+
     def present(self):
         status = ''
         for horse in self.horses:
@@ -66,7 +67,7 @@ class WinnerHorseConsolePresenter(object):
 
     def __init__(self, horses):
         self.horses = horses
-    
+
     def present(self):
         status = 'winner: {}!'
         winner = ''
@@ -97,7 +98,7 @@ def main():
     print('Make a bet!')
 
     horses = Horses()
-    
+
     horse_names = ['ziupo', 'jioki', 'baerun']
     for name in horse_names:
         horse = Horse(name)
