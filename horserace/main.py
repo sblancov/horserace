@@ -126,8 +126,6 @@ class Step(object):
 
 def main():
 
-    print('Make a bet!')
-
     horses = Horses()
 
     horse_names = [petname.generate() for i in range(4)]
