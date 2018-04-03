@@ -8,6 +8,7 @@ ipython = "*"
 "flake8" = "*"
 
 [packages]
+petname = "*"
 
 [requires]
 python_version = "3.5"

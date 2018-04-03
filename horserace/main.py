@@ -1,6 +1,7 @@
 from random import randint
 import os
 import time
+import petname
 
 
 FINISH_LINE = 20
@@ -129,18 +130,20 @@ def main():
 
     horses = Horses()
 
-    horse_names = ['ziupo', 'jioki', 'baerun', 'difge']
+    horse_names = [petname.generate() for i in range(4)]
     for name in horse_names:
         horse = Horse(name)
         horses.add_horse(horse)
 
+    step = Step()
+
     horsesp = HorsesConsolePresenter(horses)
     winnerp = WinnerHorseConsolePresenter(horses)
-    step = Step()
     viewer = HorsesConsoleViewer(step, horsesp, winnerp)
+
     while not horses.first_arrive(FINISH_LINE):
-        horses.run()
         step.inc()
+        horses.run()
         viewer.show()
 
 
