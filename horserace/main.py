@@ -92,16 +92,17 @@ class WinnerHorseConsolePresenter(object):
 
 class HorsesConsoleViewer(object):
 
-    def __init__(self, horsesp, winnerp):
+    def __init__(self, step, horsesp, winnerp):
+        self.step = step
         self.horsesp = horsesp
         self.winnerp = winnerp
 
-    def show(self, step):
+    def show(self):
         time.sleep(0.5)
         os.system('clear')
         screen = ''
         screeners = [
-            step + 1,
+            self.step.current(),
             self.horsesp.present(),
             self.winnerp.present()
         ]
@@ -110,25 +111,37 @@ class HorsesConsoleViewer(object):
         print(screen)
 
 
+class Step(object):
+
+    def __init__(self):
+        self.step = 0
+
+    def inc(self):
+        self.step += 1
+
+    def current(self):
+        return self.step
+
+
 def main():
 
     print('Make a bet!')
 
     horses = Horses()
 
-    horse_names = ['ziupo', 'jioki', 'baerun']
+    horse_names = ['ziupo', 'jioki', 'baerun', 'difge']
     for name in horse_names:
         horse = Horse(name)
         horses.add_horse(horse)
 
     horsesp = HorsesConsolePresenter(horses)
     winnerp = WinnerHorseConsolePresenter(horses)
-    step = 0
-    viewer = HorsesConsoleViewer(horsesp, winnerp)
+    step = Step()
+    viewer = HorsesConsoleViewer(step, horsesp, winnerp)
     while not horses.first_arrive(FINISH_LINE):
         horses.run()
-        viewer.show(step)
-        step += 1
+        step.inc()
+        viewer.show()
 
 
 if __name__ == '__main__':
