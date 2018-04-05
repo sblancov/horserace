@@ -8,8 +8,8 @@ This does not pretend to be something great, just practice what I have learnt an
 
 ### The original HorseRace
 
-I do not remember what was the requirements, but I remember multiple lines growing until one touching the finish line. I will start for that.
+I do not remember what was the requirements, but I remember multiple lines growing until one touching the finish line. I will start doing that.
 
 ## Contributing
 
-* Use flake8
+* Use flake8 as a style code guide,
