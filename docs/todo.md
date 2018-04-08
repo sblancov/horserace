@@ -4,14 +4,17 @@
 
 * Bets.
 
+## Refactor
+
+* Move some clases from main to other modules.
+
 ## Fixes
 
 ## Chore
 
-* Add tox.
-* Add bumpversion.
-* Packaging (setup.py or pipenv alternative if any)
+* Automatic changelog from git commits.
+* Add some commands to improve code quality (vulture, cyclomatic complexity and so on).
 
 ## Tests
 
-* Make some unit tests with pytest :D
+* Add more tests.
