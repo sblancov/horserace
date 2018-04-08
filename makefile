@@ -7,6 +7,9 @@ clean:
 static-analysis:
 	flake8 horserace
 
+test-unit:
+	tox -e py35
+
 run:
 	python horserace/main.py
 
