@@ -7,6 +7,7 @@ verify_ssl = true
 ipython = "*"
 "flake8" = "*"
 bumpversion = "*"
+pytest = "*"
 
 [packages]
 petname = "*"
