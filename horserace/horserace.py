@@ -115,13 +115,13 @@ class HorsesConsoleViewer(object):
 class Step(object):
 
     def __init__(self):
-        self.step = 0
+        self.__step = 0
 
     def inc(self):
-        self.step += 1
+        self.__step += 1
 
     def current(self):
-        return self.step
+        return self.__step
 
 
 def main():
