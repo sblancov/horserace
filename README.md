@@ -13,3 +13,13 @@ I do not remember what was the requirements, but I remember multiple lines growi
 ## Contributing
 
 * Use flake8 as a style code guide,
+
+## Installation
+
+This application needs python 3.5 or greater currently.
+
+### From Source Code
+
+First of all, download the code from this repository. Then:
+
+    pip install .
