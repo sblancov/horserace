@@ -12,6 +12,7 @@ setup(
     },
     packages=find_packages(exclude=['docs']),
     install_requires=['petname'],
+    python_requires='>=3.5',
     entry_points={
         'console_scripts': ['horserace = horserace.horserace:main']
     }
