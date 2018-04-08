@@ -14,6 +14,7 @@
 
 * Automatic changelog from git commits.
 * Add some commands to improve code quality (vulture, cyclomatic complexity and so on).
+* Dockerize it!
 
 ## Tests
 
