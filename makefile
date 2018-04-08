@@ -2,7 +2,7 @@ activate:
 	pipenv shell
 
 clean:
-	rm -rf build/ dist/ horserace.egg-info/
+	rm -rf build/ dist/ horserace.egg-info/ .pytest_cache/ .tox/
 
 static-analysis:
 	flake8 horserace
