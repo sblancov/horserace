@@ -7,8 +7,6 @@
 
 ## Refactor
 
-* Move some clases from main to other modules.
-
 ## Fixes
 
 ## Chore
