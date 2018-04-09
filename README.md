@@ -12,11 +12,15 @@ I do not remember what was the requirements, but I remember multiple lines growi
 
 ## Contributing
 
-* Use flake8 as a style code guide,
+* Take a look at makefile, there are useful commands.
 
 ## Installation
 
+### Dependencies
+
 This application needs python 3.5 or greater currently.
+
+Dependencies are listed in Pipfile.
 
 ### From Source Code
 

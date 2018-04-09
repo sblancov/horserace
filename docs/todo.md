@@ -20,3 +20,7 @@
 ## Tests
 
 * Add more tests.
+
+## Docs
+
+* Add a License
