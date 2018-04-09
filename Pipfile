@@ -9,6 +9,7 @@ ipython = "*"
 bumpversion = "*"
 pytest = "*"
 pytest-sugar = "*"
+pytest-cov = "*"
 
 [packages]
 petname = "*"
