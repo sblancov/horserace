@@ -1,1 +1,4 @@
 .vscode/
+.tox/
+.pytest_cache/
+horserace.egg-info/
