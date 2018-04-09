@@ -3,6 +3,7 @@
 ## Features
 
 * Bets.
+* Transform application into a CLI (see click library).
 
 ## Refactor
 
