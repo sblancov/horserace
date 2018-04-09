@@ -23,4 +23,4 @@
 
 ## Docs
 
-* Add a License
+* Add a [License](https://opensource.org/licenses)
