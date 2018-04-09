@@ -5,7 +5,7 @@ clean:
 	rm -rf build/ dist/ horserace.egg-info/ .pytest_cache/ .tox/
 
 static-analysis:
-	flake8 horserace
+	tox -e flake8
 
 test-unit:
 	tox -e py35
