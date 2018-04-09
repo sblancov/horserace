@@ -18,7 +18,7 @@ I do not remember what was the requirements, but I remember multiple lines growi
 
 ### Dependencies
 
-This application needs python 3.5 or greater currently.
+Currently, this application needs python 3.5 or greater.
 
 Dependencies are listed in Pipfile.
 
