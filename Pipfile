@@ -8,6 +8,7 @@ ipython = "*"
 "flake8" = "*"
 bumpversion = "*"
 pytest = "*"
+pytest-sugar = "*"
 
 [packages]
 petname = "*"

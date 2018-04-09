@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e20d35c6e65880c151e624c0f1c830f8408e3329fc3fd376a297db70d31b7ada"
+            "sha256": "fc287b081521da04b1addcc8c85bc548d6ebbef371db38e3809efa71b28d542e"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -178,6 +178,13 @@
             "index": "pypi",
             "version": "==3.5.0"
         },
+        "pytest-sugar": {
+            "hashes": [
+                "sha256:ab8cc42faf121344a4e9b13f39a51257f26f410e416c52ea11078cdd00d98a2c"
+            ],
+            "index": "pypi",
+            "version": "==0.9.1"
+        },
         "simplegeneric": {
             "hashes": [
                 "sha256:dc972e06094b9af5b855b3df4a646395e43d1c9d0d39ed345b7393560d0b9173"
@@ -190,6 +197,12 @@
                 "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb"
             ],
             "version": "==1.11.0"
+        },
+        "termcolor": {
+            "hashes": [
+                "sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"
+            ],
+            "version": "==1.1.0"
         },
         "traitlets": {
             "hashes": [
