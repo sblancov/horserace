@@ -10,6 +10,9 @@ static-analysis:
 test-unit:
 	tox -e py35
 
+pre-commit: clean
+	tox
+
 run:
 	python horserace/main.py
 
