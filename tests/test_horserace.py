@@ -1,5 +1,5 @@
 from unittest import TestCase
-from horserace.horserace import Step
+from horserace.utils.common import Step
 
 
 class TestStep(TestCase):
