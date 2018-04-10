@@ -12,7 +12,7 @@
 
 ## Chore
 
-* Add coverage HTML reports.
+* Add pytest-watch
 * Automatic changelog from git commits.
 * Add some commands to improve code quality (vulture, cyclomatic complexity and so on).
 * Dockerize it!

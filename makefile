@@ -18,3 +18,6 @@ run:
 
 package:
 	python setup.py bdist_wheel
+
+show-coverage:
+	python -m webbrowser htmlcov/index.html
