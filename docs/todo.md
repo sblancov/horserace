@@ -4,6 +4,7 @@
 
 * Bets.
 * Transform application into a CLI (see click library).
+* Add config file and parse it for initial options.
 
 ## Refactor
 
@@ -11,6 +12,7 @@
 
 ## Chore
 
+* Add coverage HTML reports.
 * Automatic changelog from git commits.
 * Add some commands to improve code quality (vulture, cyclomatic complexity and so on).
 * Dockerize it!
