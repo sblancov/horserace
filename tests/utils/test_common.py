@@ -9,3 +9,10 @@ class TestStep(TestCase):
         actual = step.current()
         expected = 0
         self.assertEqual(actual, expected)
+
+    def test_step_inc(self):
+        step = Step()
+        step.inc()
+        actual = step.current()
+        expected = 1
+        self.assertEqual(actual, expected)
