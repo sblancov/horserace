@@ -1,5 +1,7 @@
-.vscode/
-.tox/
 .pytest_cache/
+.tox/
+.vscode/
 horserace.egg-info/
+htmlcov/
+
 .coverage
