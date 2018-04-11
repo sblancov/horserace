@@ -17,6 +17,7 @@
 * Add some commands to improve code quality (vulture, cyclomatic complexity and so on).
 * Dockerize it!
 * Use CI server.
+* Use [scons](https://scons.org/) instead of make to build in a portable way.
 
 ## Tests
 
