@@ -14,7 +14,7 @@ pre-commit: clean
 	tox
 
 run:
-	python horserace/main.py
+	python horserace/horserace.py
 
 package:
 	python setup.py bdist_wheel
