@@ -1,5 +1,5 @@
 
-class Step(object):
+class StepCounter(object):
 
     def __init__(self):
         self.__step = 0

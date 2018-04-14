@@ -1,6 +1,6 @@
 import petname
 
-from utils.common import Step
+from utils.common import StepCounter
 from viewers import HorsesConsoleViewer
 from presenters import (
     HorsesConsolePresenter, WinnerHorseConsolePresenter)
@@ -19,8 +19,7 @@ def main():
         horse = Horse(name)
         horses.add_horse(horse)
 
-    step = Step()
-
+    step = StepCounter()
     horsesp = HorsesConsolePresenter(horses)
     winnerp = WinnerHorseConsolePresenter(horses)
     viewer = HorsesConsoleViewer(step, horsesp, winnerp)
