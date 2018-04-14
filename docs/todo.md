@@ -2,7 +2,7 @@
 
 ## Features
 
-* Transform application into a CLI (see click library).
+* Transform application into a CLI (see [click](http://click.pocoo.org/5/) library).
 * Bets.
 * Add config file and parse it for initial options.
 
@@ -12,9 +12,9 @@
 
 ## Chore
 
-* Automatic changelog from git commits.
-* Add pytest-watch to do TDD.
-* Add some commands to improve code quality (vulture, cyclomatic complexity and so on).
+* Automatic changelog from git commits([auto-changelog](https://pypi.python.org/pypi/auto-changelog/0.1.5)).
+* Add [pytest-watch](https://github.com/joeyespo/pytest-watch) to do TDD.
+* Add some commands to improve code quality ([vulture](https://github.com/jendrikseipp/vulture), cyclomatic complexity and so on).
 * Dockerize it!
 * Use CI server.
 * Use [scons](https://scons.org/) instead of make to build in a portable way.
