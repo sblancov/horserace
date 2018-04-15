@@ -1,10 +1,10 @@
 import petname
 
 from horserace.utils.common import StepCounter
-from horserace.ui.console.viewers import HorsesConsoleViewer
+from horserace.ui.console.viewers import RaceViewer
 from horserace.ui.console.presenters import (
-    HorsesConsolePresenter, WinnerHorseConsolePresenter)
-from horserace.models import Horse, Horses
+    RacePresenter, WinnerHorseConsolePresenter)
+from horserace.models import Horse, Race
 
 
 FINISH_LINE = 20
@@ -12,20 +12,19 @@ FINISH_LINE = 20
 
 def main():
 
-    horses = Horses()
+    step_counter = StepCounter()
+    horses = Race(step_counter)
 
     horse_names = [petname.generate() for i in range(4)]
     for name in horse_names:
         horse = Horse(name)
         horses.add_horse(horse)
 
-    step = StepCounter()
-    horsesp = HorsesConsolePresenter(horses)
+    horsesp = RacePresenter(horses)
     winnerp = WinnerHorseConsolePresenter(horses)
-    viewer = HorsesConsoleViewer(step, horsesp, winnerp)
+    viewer = RaceViewer(step_counter, horsesp, winnerp)
 
     while not horses.first_arrive(FINISH_LINE):
-        step.inc()
         horses.run()
         viewer.show()
 

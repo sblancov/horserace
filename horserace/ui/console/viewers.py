@@ -4,7 +4,7 @@ import time
 
 # TODO: Probably this viewer needs a Layout, and Layout receive as parameters Presenters.
 # Then, this class only show layout and data inside it.
-class HorsesConsoleViewer(object):
+class RaceViewer(object):
 
     def __init__(self, step, horsesp, winnerp):
         self.step = step

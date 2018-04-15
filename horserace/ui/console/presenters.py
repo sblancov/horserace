@@ -12,7 +12,7 @@ class HorseConsolePresenter(object):
         return status
 
 
-class HorsesConsolePresenter(object):
+class RacePresenter(object):
 
     def __init__(self, horses):
         self.horses = horses

@@ -18,11 +18,11 @@ class Horse(object):
         return self.location == finish_line_distance
 
 
-# TODO: Horses are not horses, this is a Race. And need step counter here.
-class Horses(object):
+class Race(object):
 
-    def __init__(self):
+    def __init__(self, step_counter):
         self.horses = []
+        self.step_counter = step_counter
 
     def __iter__(self):
         return self.horses.__iter__()
@@ -39,6 +39,7 @@ class Horses(object):
     def run(self):
         for horse in self.horses:
             horse.run()
+        self.step_counter.inc()
 
     # TODO: refactor to Race.has_finished
     def first_arrive(self, finish_line_distance):
