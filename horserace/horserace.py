@@ -16,6 +16,9 @@ def main():
     step_counter = StepCounter()
     race = Race(step_counter, FINISH_LINE)
 
+    # TODO: Refactor this create a HorseFactory with:
+    #  HorseFactory.random() and HorseFactory.named(name)
+    # TODO: Extract magic number 4 and convert it to configuration.
     horse_names = [petname.generate() for i in range(4)]
     for name in horse_names:
         horse = Horse(name)
