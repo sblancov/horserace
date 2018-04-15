@@ -1,10 +1,10 @@
 import petname
 
-from utils.common import StepCounter
-from viewers import HorsesConsoleViewer
-from presenters import (
+from horserace.utils.common import StepCounter
+from horserace.ui.console.viewers import HorsesConsoleViewer
+from horserace.ui.console.presenters import (
     HorsesConsolePresenter, WinnerHorseConsolePresenter)
-from models import Horse, Horses
+from horserace.models import Horse, Horses
 
 
 FINISH_LINE = 20
