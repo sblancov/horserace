@@ -24,3 +24,10 @@ package:
 
 show-coverage:
 	python -m webbrowser htmlcov/index.html
+
+install:
+	pip install --upgrade .
+
+# Use this to develop
+deploy-develop:
+	pip install --editable .
