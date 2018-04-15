@@ -6,10 +6,10 @@ import time
 # Then, this class only show layout and data inside it.
 class RaceViewer(object):
 
-    def __init__(self, step, horsesp, winnerp):
+    def __init__(self, step, race, winner):
         self.step = step
-        self.horsesp = horsesp
-        self.winnerp = winnerp
+        self.race = race
+        self.winner = winner
 
     def show(self):
         time.sleep(0.5)
@@ -17,8 +17,8 @@ class RaceViewer(object):
         screen = ''
         screeners = [
             self.step.current(),
-            self.horsesp.present(),
-            self.winnerp.present()
+            self.race.present(),
+            self.winner.present()
         ]
         for screener in screeners:
             screen += '{}\n'.format(screener)

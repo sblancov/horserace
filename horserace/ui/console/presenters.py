@@ -14,12 +14,12 @@ class HorseConsolePresenter(object):
 
 class RacePresenter(object):
 
-    def __init__(self, horses):
-        self.horses = horses
+    def __init__(self, race):
+        self.race = race
 
     def present(self):
         status = ''
-        for horse in self.horses:
+        for horse in self.race:
             horsep = HorseConsolePresenter(horse)
             status += horsep.present()
         return status
@@ -27,14 +27,14 @@ class RacePresenter(object):
 
 class WinnerHorseConsolePresenter(object):
 
-    def __init__(self, horses):
-        self.horses = horses
+    def __init__(self, race):
+        self.race = race
 
     def present(self):
         status = 'winner: {}!'
         winner = ''
         _max = 0
-        for horse in self.horses:
+        for horse in self.race:
             if horse.locate() > _max:
                 _max = horse.locate()
                 winner = horse.name

@@ -14,19 +14,21 @@ FINISH_LINE = 10
 def main():
 
     step_counter = StepCounter()
-    horses = Race(step_counter)
+    race = Race(step_counter, FINISH_LINE)
 
     horse_names = [petname.generate() for i in range(4)]
     for name in horse_names:
         horse = Horse(name)
-        horses.add_horse(horse)
+        race.add_horse(horse)
 
-    horsesp = RacePresenter(horses)
-    winnerp = WinnerHorseConsolePresenter(horses)
-    viewer = RaceViewer(step_counter, horsesp, winnerp)
+    race.start()
 
-    while not horses.first_arrive(FINISH_LINE):
-        horses.run()
+    racep = RacePresenter(race)
+    winnerp = WinnerHorseConsolePresenter(race)
+    viewer = RaceViewer(step_counter, racep, winnerp)
+
+    while not race.has_finished():
+        race.run()
         viewer.show()
 
 

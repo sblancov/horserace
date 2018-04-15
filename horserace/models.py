@@ -1,6 +1,14 @@
 from random import randint
 
 
+class StartedRace(Exception):
+    pass
+
+
+class NotStartedRace(Exception):
+    pass
+
+
 class Horse(object):
 
     def __init__(self, name):
@@ -20,7 +28,9 @@ class Horse(object):
 
 class Race(object):
 
-    def __init__(self, step_counter):
+    def __init__(self, step_counter, distance):
+        self.started = False
+        self.distance = distance
         self.horses = []
         self.step_counter = step_counter
 
@@ -31,19 +41,22 @@ class Race(object):
         return self.horses.__next__()
 
     def add_horse(self, horse):
+        if self.started:
+            raise StartedRace()
         self.horses.append(horse)
 
-    # TODO: Add start method and started attribute.
-    #       Then, no more horses can be added, so update add_horse method.
-    # TODO: refactor to Race.continue
+    def start(self):
+        self.started = True
+
     def run(self):
+        if not self.started:
+            raise NotStartedRace()
         for horse in self.horses:
             horse.run()
         self.step_counter.inc()
 
-    # TODO: refactor to Race.has_finished
-    def first_arrive(self, finish_line_distance):
+    def has_finished(self):
         for horse in self.horses:
-            if horse.has_arrive(finish_line_distance):
+            if horse.has_arrive(self.distance):
                 return True
         return False
