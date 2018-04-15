@@ -26,3 +26,4 @@
 ## Docs
 
 * Add a [License](https://opensource.org/licenses)
+* Take a look at [awesome-static-analysis](https://github.com/mre/awesome-static-analysis#programming-languages)
