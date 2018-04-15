@@ -7,6 +7,9 @@ clean:
 static-analysis:
 	tox -e flake8
 
+tdd:
+	pytest-watch
+
 test-unit:
 	tox -e py35
 
