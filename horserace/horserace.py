@@ -7,7 +7,8 @@ from horserace.ui.console.presenters import (
 from horserace.models import Horse, Race
 
 
-FINISH_LINE = 20
+# TODO: Extract this variable as configuration.
+FINISH_LINE = 10
 
 
 def main():
