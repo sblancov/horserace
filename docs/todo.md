@@ -4,7 +4,6 @@
 
 * Transform application into a CLI (see [click](http://click.pocoo.org/5/) library).
 * Bets.
-* Add config file and parse it for initial options.
 
 ## Refactor
 
