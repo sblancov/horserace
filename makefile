@@ -5,7 +5,7 @@ clean:
 	rm -rf build/ dist/ horserace.egg-info/ .pytest_cache/ .tox/
 
 static-analysis:
-	tox -e flake8
+	flake8
 
 tdd:
 	pytest-watch
