@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='horserace',
-    version='0.2.0',
+    version='0.3.0',
     description='Horse Race Simulator',
     author='Santiago Blanco Ventas',
     license='MIT',
