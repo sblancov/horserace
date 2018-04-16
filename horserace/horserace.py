@@ -1,5 +1,7 @@
 import petname
 
+from configparser import ConfigParser
+
 from horserace.utils.common import StepCounter
 from horserace.ui.console.viewers import RaceViewer
 from horserace.ui.console.presenters import (
@@ -7,19 +9,18 @@ from horserace.ui.console.presenters import (
 from horserace.models import Horse, Race
 
 
-# TODO: Extract this variable as configuration.
-FINISH_LINE = 10
-
-
 def main():
+    config = ConfigParser()
+    config.read('horserace.ini')
+    distance = int(config['horserace']['distance'])
+    participants = int(config['horserace']['participants'])
 
     step_counter = StepCounter()
-    race = Race(step_counter, FINISH_LINE)
+    race = Race(step_counter, distance)
 
     # TODO: Refactor this create a HorseFactory with:
     #  HorseFactory.random() and HorseFactory.named(name)
-    # TODO: Extract magic number 4 and convert it to configuration.
-    horse_names = [petname.generate() for i in range(4)]
+    horse_names = [petname.generate() for i in range(participants)]
     for name in horse_names:
         horse = Horse(name)
         race.add_horse(horse)
