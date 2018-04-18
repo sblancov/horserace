@@ -1,3 +1,4 @@
+import petname
 from random import randint
 
 
@@ -24,6 +25,14 @@ class Horse(object):
 
     def has_arrive(self, finish_line_distance):
         return self.location == finish_line_distance
+
+
+class HorseFactory(object):
+
+    def random(self):
+        name = petname.generate()
+        horse = Horse(name)
+        return horse
 
 
 class Race(object):
