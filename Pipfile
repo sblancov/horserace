@@ -11,6 +11,7 @@ pytest = "*"
 pytest-sugar = "*"
 pytest-cov = "*"
 pytest-watch = "*"
+auto-changelog = "*"
 
 [packages]
 petname = "*"
