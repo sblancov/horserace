@@ -35,6 +35,9 @@ bumpversion:
 generate-changelog:
 	auto-changelog
 
+analyze-security:
+	bandit
+
 # Use this to develop
 deploy-develop:
 	pip install --editable .
