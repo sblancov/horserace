@@ -29,6 +29,12 @@ show-coverage:
 install:
 	pip install --upgrade .
 
+bumpversion:
+	bumpversion
+
+generate-changelog:
+	auto-changelog
+
 # Use this to develop
 deploy-develop:
 	pip install --editable .
