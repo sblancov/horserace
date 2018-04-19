@@ -15,7 +15,6 @@
 * Dockerize it!
 * Use CI server.
 * Use [scons](https://scons.org/) instead of make to build in a portable way.
-* Use [bandit](https://github.com/openstack/bandit)
 
 ## Tests
 
