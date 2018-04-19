@@ -5,7 +5,7 @@ class ConfigLoader(object):
 
     def __init__(self):
         self.config = ConfigParser()
-        self.config.read(['horserace.cfg'])
+        self.config.read(['horserace.cfg', 'setup.cfg'])
 
     def distance(self):
         distance = self.config.getint('horserace', 'distance')
