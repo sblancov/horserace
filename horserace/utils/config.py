@@ -8,9 +8,15 @@ class ConfigLoader(object):
         self.config.read(['horserace.cfg', 'setup.cfg'])
 
     def distance(self):
-        distance = self.config.getint('horserace', 'distance')
+        section = 'horserace'
+        field = 'distance'
+        default = 10
+        distance = self.config.getint(section, field, fallback=default)
         return distance
 
     def participants(self):
-        participants = self.config.getint('horserace', 'participants')
+        section = 'horserace'
+        field = 'participants'
+        default = 3
+        participants = self.config.getint(section, field, fallback=default)
         return participants
