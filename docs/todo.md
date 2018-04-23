@@ -4,6 +4,7 @@
 
 * Bets.
 * Use [curses](https://docs.python.org/3/howto/curses.html)
+* Use ASCII Art to draw horses.
 
 ## Refactor
 
