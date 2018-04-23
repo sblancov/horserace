@@ -2,6 +2,28 @@
 
 
 
+## Version 0.5.0 (2018-04-23)
+
+### New Features
+- Accept configuration by cli parameters
+
+
+
+
+
+### Documentation Changes
+- Remove bandit from TODO
+
+
+### Administration and Chores
+- Add auto-changelog as dependency
+- Add make bumpversion and generate-changelog commands
+- Add bandit as dependency
+- Add click as dependency
+
+
+
+
 ## Version 0.4.0 (2018-04-20)
 
 ### New Features
