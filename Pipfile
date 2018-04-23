@@ -13,6 +13,7 @@ pytest-cov = "*"
 pytest-watch = "*"
 auto-changelog = "*"
 bandit = "*"
+ipdb = "*"
 
 [packages]
 petname = "*"
