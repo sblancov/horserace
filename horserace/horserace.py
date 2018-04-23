@@ -1,3 +1,5 @@
+import click
+
 from horserace.utils.common import StepCounter
 from horserace.utils.config import ConfigLoader
 from horserace.ui.console.viewers import RaceViewer
@@ -6,8 +8,11 @@ from horserace.ui.console.presenters import (
 from horserace.models import HorseFactory, Race
 
 
-def main():
-    config = ConfigLoader()
+@click.command()
+@click.option('--distance', help='Number of steps to reach the finish line.')
+@click.option('--participants', help='Number of participants in the race!')
+def main(**kwargs):
+    config = ConfigLoader(**kwargs)
     distance = config.distance()
     participants = config.participants()
 
