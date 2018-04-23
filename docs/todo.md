@@ -2,7 +2,6 @@
 
 ## Features
 
-* Transform application into a CLI (see [click](http://click.pocoo.org/5/) library).
 * Bets.
 * Use [curses](https://docs.python.org/3/howto/curses.html)
 
