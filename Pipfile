@@ -14,6 +14,7 @@ pytest-watch = "*"
 auto-changelog = "*"
 bandit = "*"
 ipdb = "*"
+pylint = "*"
 
 [packages]
 petname = "*"
