@@ -12,6 +12,7 @@
 
 ## Chore
 
+* Add Pylint.
 * Add some commands to improve code quality ([vulture](https://github.com/jendrikseipp/vulture), cyclomatic complexity and so on).
 * Dockerize it!
 * Use CI server.
