@@ -1,5 +1,5 @@
 
-class HorseConsolePresenter(object):
+class HorsePresenter(object):
 
     def __init__(self, horse):
         self.horse = horse
@@ -20,7 +20,7 @@ class RacePresenter(object):
     def present(self):
         status = ''
         for horse in self.race:
-            horsep = HorseConsolePresenter(horse)
+            horsep = HorsePresenter(horse)
             status += horsep.present()
         return status
 
