@@ -4,6 +4,7 @@ activate:
 clean:
 	rm -rf build/ dist/ horserace.egg-info/ .pytest_cache/ .tox/
 	rm -rf htmlcov/ .coverage
+	find . -name __pycache__ | xargs rm -r
 
 static-analysis:
 	flake8
