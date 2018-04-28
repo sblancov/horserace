@@ -13,10 +13,7 @@ tdd:
 	pytest-watch
 
 test-unit:
-	tox -e py35
-
-pre-commit: clean
-	tox
+	pytest tests/unit/
 
 run:
 	python horserace/horserace.py
