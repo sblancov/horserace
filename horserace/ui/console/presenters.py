@@ -25,7 +25,7 @@ class RacePresenter(object):
         return status
 
 
-class WinnerHorseConsolePresenter(object):
+class WinnerHorsePresenter(object):
 
     def __init__(self, race):
         self.race = race

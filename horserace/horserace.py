@@ -4,7 +4,7 @@ from horserace.utils.common import StepCounter
 from horserace.utils.config import ConfigLoader
 from horserace.ui.console.viewers import RaceViewer
 from horserace.ui.console.presenters import (
-    RacePresenter, WinnerHorseConsolePresenter)
+    RacePresenter, WinnerHorsePresenter)
 from horserace.models import HorseFactory, Race
 
 
@@ -28,7 +28,7 @@ def main(**kwargs):
 
     # TODO: Create layer...
     racep = RacePresenter(race)
-    winnerp = WinnerHorseConsolePresenter(race)
+    winnerp = WinnerHorsePresenter(race)
     viewer = RaceViewer(step_counter, racep, winnerp)
 
     while not race.has_finished():
