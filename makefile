@@ -34,8 +34,9 @@ generate-changelog:
 	auto-changelog
 
 analyze-security:
-	bandit
+	bandit -r horserace
 
-# Use this to develop
+pre-commit: clean static-analysis test-unit
+
 deploy-develop:
 	pip install --editable .
