@@ -5,7 +5,7 @@ from horserace.utils.config import ConfigLoader
 from horserace.ui.console.viewers import RaceViewer
 from horserace.ui.console.presenters import (
     RacePresenter, WinnerHorsePresenter)
-from horserace.models import HorseFactory, Race
+from horserace.models.race import HorseFactory, Race
 
 
 @click.command()

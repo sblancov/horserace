@@ -1,5 +1,6 @@
 import petname
-from random import randint
+
+from horserace.models.speed import RandomSpeed
 
 
 class StartedRace(Exception):
@@ -12,13 +13,14 @@ class NotStartedRace(Exception):
 
 class Horse(object):
 
-    def __init__(self, name):
+    def __init__(self, name, speed):
         self.name = name
         self.location = 0
+        self.speed = speed
 
     def run(self):
-        speed = randint(0, 1)
-        self.location += speed
+        movement = self.speed.next()
+        self.location += movement
 
     def locate(self):
         return self.location
@@ -31,7 +33,8 @@ class HorseFactory(object):
 
     def random(self):
         name = petname.generate()
-        horse = Horse(name)
+        speed = RandomSpeed()
+        horse = Horse(name, speed)
         return horse
 
 
