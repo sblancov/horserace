@@ -1,3 +1,7 @@
+startup:
+	pip install -r requirements.txt
+	pipenv install --dev
+
 activate:
 	pipenv shell
 
@@ -23,9 +27,6 @@ package:
 
 show-coverage:
 	python -m webbrowser htmlcov/index.html
-
-install:
-	pip install --upgrade .
 
 bumpversion:
 	bumpversion
