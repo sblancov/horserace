@@ -36,7 +36,7 @@ generate-changelog:
 analyze-security:
 	bandit -r horserace
 
-pre-commit: clean static-analysis test-unit
+pre-push: clean static-analysis test-unit
 
 deploy-develop:
 	pip install --editable .
