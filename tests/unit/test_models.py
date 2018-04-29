@@ -1,6 +1,7 @@
 from unittest import TestCase
 from unittest.mock import Mock
 from horserace.models.race import Horse
+from horserace.models.speed import RandomSpeed
 
 
 class TestHorse(TestCase):
@@ -25,3 +26,12 @@ class TestHorse(TestCase):
         finish = 0
         actual = self.horse.has_arrive(finish)
         self.assertTrue(actual)
+
+
+class TestRandomSpeed(TestCase):
+
+    def test_next(self):
+        speed = RandomSpeed()
+        actual = speed.next()
+        expected = actual == 0 or actual == 1
+        self.assertTrue(expected)
