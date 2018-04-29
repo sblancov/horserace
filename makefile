@@ -8,6 +8,9 @@ analyze-security:
 bumpversion:
 	bumpversion
 
+cobertura:
+	pytest --cov=horserace --cov-report html tests/unit/
+
 clean:
 	rm -rf build/ dist/ horserace.egg-info/ .pytest_cache/ .tox/
 	rm -rf htmlcov/ .coverage
@@ -41,4 +44,4 @@ tdd:
 	pytest-watch
 
 test-unit:
-	pytest tests/unit/
+	pytest --cov horserace --cov-report term-missing tests/unit/
