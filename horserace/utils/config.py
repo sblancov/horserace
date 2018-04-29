@@ -46,15 +46,13 @@ class CommandLoader(Loader):
         value = self.kwargs.get('distance')
         if value is not None:
             return int(value)
-        else:
-            return super().distance()
+        return super().distance()
 
     def participants(self):
         value = self.kwargs.get('participants')
         if value is not None:
             return int(value)
-        else:
-            return super().participants()
+        return super().participants()
 
 
 class ConfigLoader(object):
