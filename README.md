@@ -13,17 +13,23 @@ I do not remember what was the requirements, but I remember multiple lines growi
 ## Contributing
 
 * Take a look at makefile, there are useful commands.
+* Install all dev dependencies.
+* Configure .githooks
+
+    git config core.hooksPath .githooks
 
 ## Installation
 
+For now, [pipenv](https://docs.pipenv.org/) is preferred over [pip](https://pip.pypa.io/en/stable/) plus [virtualenv](https://virtualenv.pypa.io/en/stable/), so install pipenv and then, manage virtual environment and install dependencies with it.
+
 ### Dependencies
 
-Currently, this application needs python 3.5 or greater.
+Currently, this application needs python 3.5 (executed over Linux).
 
-Dependencies are listed in Pipfile.
+All python dependencies are listed in the Pipfile.
 
 ### From Source Code
 
 First of all, download the code from this repository. Then:
 
-    pip install .
+    python3 -m pip install .
